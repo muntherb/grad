@@ -1,0 +1,440 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/dashboard">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/progress">Progress</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/diets">Diets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/exercises">Exercises</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact dietician</a>
+        </li>
+      </ul>
+      <a class="btn btn-secondary my-2 my-sm-0" href="/users/logout" >Logout</a>
+    </div>
+  </nav>
+<p>
+
+  Here is your suggested diet!
+</p>
+
+<%var BMI = user.weight/(user.height*user.height)%>
+
+
+<%# WHEN LESS THAN 20 %>
+<%if ( 20 > BMI ){ %>
+  <div class="alert alert-dismissible alert-primary">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>BMI below 20 = Underweight</strong> <a href="#" class="alert-link">You don’t need to lose weight. Your BMI shows you are already underweight for your height and your health could be at risk by limiting your calories. It may be worth talking to your GP.    
+    </div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Day</th>
+          <th scope="col">Breakfast</th>
+          <th scope="col">Snacks</th>
+          <th scope="col">Lunch</th>
+          <th scope="col">Snacks</th>
+          <th scope="col">Dinner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-active">
+          <th scope="row">Saturday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr>
+          <th scope="row">Sunday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-primary">
+          <th scope="row">Monday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-secondary">
+          <th scope="row">Tuesday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-success">
+          <th scope="row">Wednesday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-danger">
+          <th scope="row">Thursday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-warning">
+          <th scope="row">Friday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+      </tbody>
+    </table> 
+
+
+
+    <%# WHEN 20 - 25  %>
+<% } else if (  BMI>20 && BMI < 25) { %>
+  <div class="alert alert-dismissible alert-success">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>Well done! BMI 20 – 24.9 = Healthy Weight</strong> Nice one! You are an ideal weight for your height.
+    </div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Day</th>
+          <th scope="col">Breakfast</th>
+          <th scope="col">Snacks</th>
+          <th scope="col">Lunch</th>
+          <th scope="col">Snacks</th>
+          <th scope="col">Dinner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-active">
+          <th scope="row">Saturday</th>
+          <td>Eggs and Turkey bacon</td>
+          <td>Nuts</td>
+          <td>Salmon and Tomato and Cucumber Salad</td>
+          <td>Dried fruit</td>
+          <td>Grilled chicken, black beans, side salad</td>
+        </tr>
+        <tr>
+          <th scope="row">Sunday</th>
+          <td>Sausage and deviled eggs</td>
+          <td>Fruit</td>
+          <td>Chef Salad</td>
+          <td>Salad</td>
+          <td>Chili stuffed peppers</td>
+        </tr>
+        <tr class="table-primary">
+          <th scope="row">Monday</th>
+          <td>Sausage and sun-dried tomatoes</td>
+          <td>Apple</td>
+          <td>Leftover chili</td>
+          <td>Nuts</td>
+          <td>Chicken and broccoli alfredo bake</td>
+        </tr>
+        <tr class="table-secondary">
+          <th scope="row">Tuesday</th>
+          <td>Plain Greek yogurt with vanilla extract</td>
+          <td>Dried fruit</td>
+          <td>Protein Antipasto Salad</td>
+          <td>Chocolate</td>
+          <td>Bacon wrapped tomato pesto</td>
+        </tr>
+        <tr class="table-success">
+          <th scope="row">Wednesday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-danger">
+          <th scope="row">Thursday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-warning">
+          <th scope="row">Friday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+      </tbody>
+    </table> 
+
+
+
+    <%# WHEN 25 - 30  %>
+<% } else if (BMI>25 && BMI < 30) { %>
+  <div class="alert alert-dismissible alert-danger">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>BMI 25 – 29.9 = Overweight</strong> <a href="#" class="alert-link">Your weight is above the ideal range for your height, but help is at hand. Find a Consultant near you and start moving back into that healthy weight range.
+    </div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Day</th>
+          <th scope="col">Breakfast</th>
+          <th scope="col">Snacks</th>
+          <th scope="col">Lunch</th>
+          <th scope="col">Snacks</th>
+          <th scope="col">Dinner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-active">
+          <th scope="row">Saturday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr>
+          <th scope="row">Sunday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-primary">
+          <th scope="row">Monday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-secondary">
+          <th scope="row">Tuesday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-success">
+          <th scope="row">Wednesday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-danger">
+          <th scope="row">Thursday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-warning">
+          <th scope="row">Friday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+      </tbody>
+    </table> 
+
+
+
+
+
+
+    <%# WHEN 30 - 40  %>
+<% } else if (BMI>30 && BMI < 40) { %>
+  <div class="alert alert-dismissible alert-danger">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>BMI 30 – 39.9 = Obese</strong> <a href="#" class="alert-link">Your weight is way above ideal and increasing your risk of health issues. Find a Consultant now and get the support you need to reduce your BMI to a healthy level.
+    </div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Day</th>
+          <th scope="col">Breakfast</th>
+          <th scope="col">Snacks</th>
+          <th scope="col">Lunch</th>
+          <th scope="col">Snacks</th>
+          <th scope="col">Dinner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-active">
+          <th scope="row">Saturday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr>
+          <th scope="row">Sunday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-primary">
+          <th scope="row">Monday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-secondary">
+          <th scope="row">Tuesday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-success">
+          <th scope="row">Wednesday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-danger">
+          <th scope="row">Thursday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-warning">
+          <th scope="row">Friday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+      </tbody>
+    </table> 
+
+
+
+
+
+
+
+    <%# WHEN 40+ %>
+<% } else { %>
+  <div class="alert alert-dismissible alert-danger">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>BMI 40+ = Very Obese</strong> <a href="#" class="alert-link">You are seriously at risk of health issues. Find a Consultant now for the help and support you need to get back to a healthy weight.
+    </div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Day</th>
+          <th scope="col">Breakfast</th>
+          <th scope="col">Snacks</th>
+          <th scope="col">Lunch</th>
+          <th scope="col">Snacks</th>
+          <th scope="col">Dinner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-active">
+          <th scope="row">Saturday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr>
+          <th scope="row">Sunday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-primary">
+          <th scope="row">Monday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-secondary">
+          <th scope="row">Tuesday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-success">
+          <th scope="row">Wednesday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-danger">
+          <th scope="row">Thursday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="table-warning">
+          <th scope="row">Friday</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+      </tbody>
+    </table> 
+
+
+<% } %>
+ 
+
+

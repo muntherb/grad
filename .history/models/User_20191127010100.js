@@ -1,0 +1,34 @@
+const mongoose = require('mongoose');
+
+const UserSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  date: {
+    type: Date,
+    default: Date.now
+  },
+  height: {
+    type: mongoose.Types.Decimal128,
+    required: true
+  },
+  weight: {
+    type: mongoose.Types.Decimal128,
+    required: true
+  },
+  BMI: mongoose.Types.Decimal128,
+     BMI = user.weight/(user.height*user.height)
+});
+
+const User = mongoose.model('User', UserSchema);
+
+module.exports = User;

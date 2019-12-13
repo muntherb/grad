@@ -1,0 +1,124 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/progress">Progress</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/diets">Diets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact dietician</a>
+        </li>
+      </ul>
+      <a class="btn btn-secondary my-2 my-sm-0" href="/users/logout" >Logout</a>
+    </div>
+  </nav>
+  <p>         
+
+
+
+   
+
+
+
+  </p>
+
+  
+<%var BMI = user.weight/(user.height*user.height)%>
+  <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+      <div class="card-header">Welcome <%= user.name %>!</div>
+      <div class="card-body">
+        <h4 class="card-title">This is your smart dietician app!</h4>
+        <p class="card-text">Your current BMI is <%=BMI %> </p>
+      </div>
+    </div>
+
+    
+
+    <div class="accordion js-accordion">
+
+        <div class="accordion__item">
+            <h3 class="accordion__title"><p>BMI below 20 = Underweight</p></h3>
+            <div class="accordion__content">
+                <div class="accordion__tray flow">
+                    <p>You don’t need to lose weight. Your BMI shows you are already underweight for your height and your health could be at risk by limiting your calories. It may be worth talking to your GP.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Accordion -->
+    
+    <div class="accordion js-accordion">
+    
+        <div class="accordion__item">
+            <h3 class="accordion__title">BMI 20 – 24.9 = Healthy Weight</h3>
+            <div class="accordion__content">
+                <div class="accordion__tray flow">
+                    <p>Nice one! You are an ideal weight for your height.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Accordion -->
+    
+    <div class="accordion js-accordion">
+    
+        <div class="accordion__item">
+            <h3 class="accordion__title">BMI 25 – 29.9 = Overweight</h3>
+            <div class="accordion__content">
+                <div class="accordion__tray flow">
+                    <p>Your weight is above the ideal range for your height, but help is at hand. Find a Consultant near you and start moving back into that healthy weight range.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Accordion -->
+    
+    <div class="accordion js-accordion">
+    
+        <div class="accordion__item">
+            <h3 class="accordion__title">BMI 30 – 39.9 = Obese</h3>
+            <div class="accordion__content">
+                <div class="accordion__tray flow">
+                    <p>Your weight is way above ideal and increasing your risk of health issues. Find a Consultant now and get the support you need to reduce your BMI to a healthy level.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Accordion -->
+    
+    <div class="accordion js-accordion">
+    
+        <div class="accordion__item">
+            <h3 class="accordion__title">BMI 40+ = Very Obese</h3>
+            <div class="accordion__content">
+                <div class="accordion__tray flow">
+                    <p>You are seriously at risk of health issues. Find a Consultant now for the help and support you need to get back to a healthy weight.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+        </div>
+    </section>
+    
+   
+   

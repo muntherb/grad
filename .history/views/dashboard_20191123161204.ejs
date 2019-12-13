@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/progress">Progress</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/diets">Diets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/diets">Contact dietician</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <p>         
+
+
+
+
+
+
+      
+  </p>
+
+  <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+      <div class="card-header">Welcome <%= user.name %>!</div>
+      <div class="card-body">
+        <h4 class="card-title">This is your smart dietician app!</h4>
+        <p class="card-text">Go through the dashboard to check your progress today!</p>
+      </div>
+    </div>
+
+<a href="/users/logout" class="btn btn-secondary">Logout</a>

@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/progress">Progress</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/diets">Diets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/exercises">Exercises</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact dietician</a>
+        </li>
+      </ul>
+      <a class="btn btn-secondary my-2 my-sm-0" href="/users/logout" >Logout</a>
+    </div>
+  </nav>
+
+  <%var BMI = user.weight/(user.height*user.height)%>
+  <div class="jumbotron">
+      <h1 class="display-3">Here is your progress</h1>
+      <p class="lead">This is a comparison of the last time you have weighted yourself and your current weight!</p>
+      <hr class="my-4">
+      <% if(BMI < 20){ %>
+        <div class="alert alert-dismissible alert-danger">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <strong>You need to gain <%=((25 *(user.height*user.height)) - user.weight)%>Kgs to reach the ideal BMI level!</strong>
+        </div>
+        
+      <% } else if (BMI>25){ %>  
+        <div class="alert alert-dismissible alert-danger">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <strong>You need to lose <%=(user.weight -(25 *(user.height*user.height)))%>Kgs to reach the ideal BMI level!</strong>
+        </div>
+        <% } else{ %> 
+          Maintain your weight!
+          <% } %>
+      
+      <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 1%"></div>
+        </div>
+  </div>
+ 
+   
+ 

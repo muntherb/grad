@@ -1,0 +1,443 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/progress">Progress</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/diets">Diets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact dietician</a>
+        </li>
+      </ul>
+      <a class="btn btn-secondary my-2 my-sm-0" href="/users/logout" >Logout</a>
+    </div>
+  </nav>
+  <p>         
+
+
+
+   
+
+
+
+  </p>
+
+  <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+      <div class="card-header">Welcome <%= user.name %>!</div>
+      <div class="card-body">
+        <h4 class="card-title">This is your smart dietician app!</h4>
+        <p class="card-text">Your current BMI is= <%= (user.weight/(user.height*user.height)) %></p>
+      </div>
+    </div>
+
+
+
+    <div class="accordion js-accordion">
+
+        <div class="accordion__item">
+            <h3 class="accordion__title"><p>BMI below 20 = Underweight</p></h3>
+            <div class="accordion__content">
+                <div class="accordion__tray flow">
+                    <p>You don’t need to lose weight. Your BMI shows you are already underweight for your height and your health could be at risk by limiting your calories. It may be worth talking to your GP.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Accordion -->
+    
+    <div class="accordion js-accordion">
+    
+        <div class="accordion__item">
+            <h3 class="accordion__title">BMI 20 – 24.9 = Healthy Weight</h3>
+            <div class="accordion__content">
+                <div class="accordion__tray flow">
+                    <p>Nice one! You are an ideal weight for your height.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Accordion -->
+    
+    <div class="accordion js-accordion">
+    
+        <div class="accordion__item">
+            <h3 class="accordion__title">BMI 25 – 29.9 = Overweight</h3>
+            <div class="accordion__content">
+                <div class="accordion__tray flow">
+                    <p>Your weight is above the ideal range for your height, but help is at hand. Find a Consultant near you and start moving back into that healthy weight range.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Accordion -->
+    
+    <div class="accordion js-accordion">
+    
+        <div class="accordion__item">
+            <h3 class="accordion__title">BMI 30 – 39.9 = Obese</h3>
+            <div class="accordion__content">
+                <div class="accordion__tray flow">
+                    <p>Your weight is way above ideal and increasing your risk of health issues. Find a Consultant now and get the support you need to reduce your BMI to a healthy level.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Accordion -->
+    
+    <div class="accordion js-accordion">
+    
+        <div class="accordion__item">
+            <h3 class="accordion__title">BMI 40+ = Very Obese</h3>
+            <div class="accordion__content">
+                <div class="accordion__tray flow">
+                    <p>You are seriously at risk of health issues. Find a Consultant now for the help and support you need to get back to a healthy weight.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+        </div>
+    </section>
+    
+   
+    <section class="section bg-white">
+        <div class="wrapper">
+            <div class="grid">
+                <div class="gu gu--desk6 gu--tab6 gu--mob12">
+                    <div class="rt flow">
+        <h2>What does it mean for you?</h2><p>The results are given as a range because there’s no one ideal weight for people of different heights and builds. Your BMI is also influenced by your age and whether you’re male or female.&nbsp;Some people can also be considered ‘Overweight’ (25-30 BMI), yet have reasonably (or very) low body fat and just be quite muscular.</p>
+    </div>
+    
+                </div>
+                <div class="gu gu--desk6 gu--tab6 gu--mob12">
+                    <div class="rt flow">
+        <p>At your first appointment, your Consultant will tell you more about how important a healthy BMI is. They’ll also take your waist measurement – that’s the best way to see how much fat you’re carrying. As your BMI reduces, your waistline will too.<br></p>
+    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section bg-secondary">
+        <div class="wrapper">
+    
+            
+    
+    <div class="bmi-calc js-bmi-calc">
+        <div class="bmi-calc__main">
+            <div class="grid">
+                <div class="gu u-hide-mob u-hide-tab gu--desk3">
+                    <div class="bmi-calc__image">
+                        <img src="/Assets/images/CC Looking_Good_EC.png" alt="BMI Calculator Image">
+                    </div>
+                </div>
+                <div class="gu gu--mob12 gu--tab9 gu--desk7">
+                    <div class="bmi-calc__form">
+                        <div class="bmi-calc__imperial">
+                            <fieldset class="bmi-calc__height">
+                                <legend>Enter your height</legend>
+                                <span class="text-field unit" data-unit="ft">
+                                    <input name="bmi-feet" id="bmi-feet" type="number" class="text-field__input js-bmi-feet" autocomplete="off" placeholder="">
+                                </span>
+                                <span class="text-field unit" data-unit="in">
+                                    <input name="bmi-inches" id="bmi-inches" type="number" class="text-field__input js-bmi-inches" autocomplete="off" placeholder="">
+                                </span>
+                            </fieldset>
+    
+                            <fieldset class="bmi-calc__weight">
+                                <legend>Enter your weight</legend>
+                                <span class="text-field unit" data-unit="st">
+                                    <input name="bmi-stone" id="bmi-stone" type="number" class="text-field__input js-bmi-stone" autocomplete="off" placeholder="">
+                                </span>
+                                <span class="text-field unit" data-unit="lb">
+                                    <input name="bmi-lbs" id="bmi-lbs" type="number" class="text-field__input js-bmi-lbs" autocomplete="off" placeholder="">
+                                </span>
+                            </fieldset>
+                        </div>
+    
+                        <div class="bmi-calc__metric">
+                            <fieldset class="bmi-calc__height">
+                                <legend>Enter your height</legend>
+                                <span class="text-field unit" data-unit="m">
+                                    <input name="bmi-m" id="bmi-m" type="number" class="text-field__input js-bmi-m" autocomplete="off" placeholder="">
+                                </span>
+                                <span class="text-field unit" data-unit="cm">
+                                    <input name="bmi-cm" id="bmi-cm" type="number" class="text-field__input js-bmi-cm" autocomplete="off" placeholder="">
+                                </span>
+                            </fieldset>
+    
+                            <fieldset class="bmi-calc__weight">
+                                <legend>Enter your weight</legend>
+                                <span class="text-field unit" data-unit="kg">
+                                    <input name="bmi-kg" id="bmi-kg" type="number" class="text-field__input js-bmi-kg" autocomplete="off" placeholder="">
+                                </span>
+                            </fieldset>
+                        </div>
+    
+                        <div class="bmi-calc__mode">
+                            <span class="bmi-calc__option">
+                                <input type="radio" id="mode-imp" name="mode" value="imp" class="u-hide-acc js-bmi-imp js-showhide" data-target=".bmi-calc__imperial" checked>
+                                <label for="mode-imp">Imperial</label>
+                            </span>
+                            <span class="bmi-calc__option">
+                                <input type="radio" id="mode-met" name="mode" value="met" class="u-hide-acc js-bmi-met js-showhide" data-target=".bmi-calc__metric">
+                                <label for="mode-met">Metric</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gu gu--mob12 gu--tab3 gu--desk2">
+                    <div class="bmi-calc__result">
+                        <span>Your BMI score is:</span>
+                        <span class="t-h1 bmi-calc__score js-bmi-score">
+                            0
+                        </span>
+                        <span class="bmi-calc__status js-bmi-status">You are normal weight</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="bmi-calc__fallback">
+            <div class="rt flow">
+                <h2>Looks like you haven't got Javascript enabled</h2>
+                <p>Please turn on javascript to ensure that this widget works.</p>
+            </div>
+        </div>
+    </div>
+        </div>
+    </section>
+    
+    <section class="section bg-white">
+        <div class="wrapper">
+    
+            
+        <!-- No image -->
+        <div class="section-heading">
+            <div class="grid">
+                <div class="gu gu--mob12 gu--tab12 gu--desk3"></div>
+                <div class="gu gu--mob12 gu--tab12 gu--desk6">
+                    <div class="section-heading__content flow">
+                        <h2 class="section-heading__title">What your BMI means</h2>
+    
+    
+                    </div>
+                </div>
+                <div class="gu gu--mob12 gu--tab12 gu--desk3"></div>
+            </div>
+        </div>
+    
+    
+    
+    
+        </div>
+    </section>
+    
+    <section class="section bg-white">
+        <div class="wrapper">
+    
+            
+    <!-- Accordion -->
+    
+    <div class="accordion js-accordion">
+    
+        <div class="accordion__item">
+            <h3 class="accordion__title"><p>BMI below 20 = Underweight</p></h3>
+            <div class="accordion__content">
+                <div class="accordion__tray flow">
+                    <p>You don’t need to lose weight. Your BMI shows you are already underweight for your height and your health could be at risk by limiting your calories. It may be worth talking to your GP.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Accordion -->
+    
+    <div class="accordion js-accordion">
+    
+        <div class="accordion__item">
+            <h3 class="accordion__title">BMI 20 – 24.9 = Healthy Weight</h3>
+            <div class="accordion__content">
+                <div class="accordion__tray flow">
+                    <p>Nice one! You are an ideal weight for your height.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Accordion -->
+    
+    <div class="accordion js-accordion">
+    
+        <div class="accordion__item">
+            <h3 class="accordion__title">BMI 25 – 29.9 = Overweight</h3>
+            <div class="accordion__content">
+                <div class="accordion__tray flow">
+                    <p>Your weight is above the ideal range for your height, but help is at hand. <a target="" href="https://www.one2onediet.com/find-a-consultant">Find a Consultant</a>&nbsp;near you and start moving back into that healthy weight range.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Accordion -->
+    
+    <div class="accordion js-accordion">
+    
+        <div class="accordion__item">
+            <h3 class="accordion__title">BMI 30 – 39.9 = Obese</h3>
+            <div class="accordion__content">
+                <div class="accordion__tray flow">
+                    <p>Your weight is way above ideal and increasing your risk of health issues. <a target="" href="https://www.one2onediet.com/find-a-consultant">Find a Consultant</a> now and get the support you need to reduce your BMI to a healthy level.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Accordion -->
+    
+    <div class="accordion js-accordion">
+    
+        <div class="accordion__item">
+            <h3 class="accordion__title">BMI 40+ = Very Obese</h3>
+            <div class="accordion__content">
+                <div class="accordion__tray flow">
+                    <p>You are seriously at risk of health issues. <a target="" href="https://www.one2onediet.com/find-a-consultant">Find a Consultant</a> now for the help and support you need to get back to a healthy weight.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+        </div>
+    </section>
+    
+    <section class="section bg-white">
+        <div class="wrapper">
+    
+            
+        <!-- No image -->
+        <div class="section-heading">
+            <div class="grid">
+                <div class="gu gu--mob12 gu--tab12 gu--desk3"></div>
+                <div class="gu gu--mob12 gu--tab12 gu--desk6">
+                    <div class="section-heading__content flow">
+                        <h2 class="section-heading__title">Start today!</h2>
+                            <p><p>Find a Consultant to get to your weight-loss goals. Just hit the button below.</p></p>
+    
+    
+                            <a href="/find-a-consultant" class="btn btn--primary js-button"><span class="btn__label">Find a Consultant</span></a>
+                    </div>
+                </div>
+                <div class="gu gu--mob12 gu--tab12 gu--desk3"></div>
+            </div>
+        </div>
+    
+    
+    
+    
+        </div>
+    </section>
+    
+    
+            </main>
+        </div>
+    
+        <!-- Site footer -->
+    <footer class="primary-footer bg-primary">
+        <div class="wrapper">
+    
+            <div class="primary-footer__main">
+                <div class="grid">
+                    <div class="gu gu--mob12 gu--tab12 gu--desk8">
+                        <ul class="primary-footer__links" role="navigation" aria-label="Footer navigation">
+                                <li class="primary-footer__link-item">
+                                    <a href="/blog" class="primary-footer__link">Read our blog</a>
+                                </li>
+                                <li class="primary-footer__link-item">
+                                    <a href="/contact-us" class="primary-footer__link">Contact us</a>
+                                </li>
+                                <li class="primary-footer__link-item">
+                                    <a href="/contact-us" class="primary-footer__link">Leave feedback</a>
+                                </li>
+                                <li class="primary-footer__link-item">
+                                    <a href="/blog/recipes" class="primary-footer__link">The 1:1 Diet recipes</a>
+                                </li>
+                                <li class="primary-footer__link-item">
+                                    <a href="/Worldwide-distribution" class="primary-footer__link">Worldwide distribution</a>
+                                </li>
+                                <li class="primary-footer__link-item">
+                                    <a href="/Press-PR" class="primary-footer__link">Press &amp; PR</a>
+                                </li>
+                                <li class="primary-footer__link-item">
+                                    <a href="/bmi-calculator" class="primary-footer__link">Use our BMI Calculator</a>
+                                </li>
+                                <li class="primary-footer__link-item">
+                                    <a href="/faqs" class="primary-footer__link">FAQs</a>
+                                </li>
+                                <li class="primary-footer__link-item">
+                                    <a href="/terms-of-use" class="primary-footer__link">Terms of use</a>
+                                </li>
+                                <li class="primary-footer__link-item">
+                                    <a href="/privacy-policy" class="primary-footer__link">Cookie policy</a>
+                                </li>
+                                <li class="primary-footer__link-item">
+                                    <a href="/privacy-policy" class="primary-footer__link">Privacy policy</a>
+                                </li>
+                                <li class="primary-footer__link-item">
+                                    <a href="/anti-slavery-statement" class="primary-footer__link">Anti-Slavery Statement</a>
+                                </li>
+                        </ul>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div class="primary-footer__social social">
+                    <span class="social__label t-h3">Jump on board</span>                            <div class="social__links">
+                            <a href="https://www.facebook.com/one2onediet" target="_blank" class="social__icon social__icon--fb"><span class="u-hide-acc">Facebook</span></a>
+                            <a href="https://www.instagram.com/one2onediet/" target="_blank" class="social__icon social__icon--ig"><span class="u-hide-acc">Instagram</span></a>
+                            <a href="https://twitter.com/one2onediet" target="_blank" class="social__icon social__icon--tw"><span class="u-hide-acc">Twitter</span></a>
+                            <a href="https://www.pinterest.co.uk/cambsweightplan/" target="_blank" class="social__icon social__icon--pn"><span class="u-hide-acc">Pinterest</span></a>
+                            <a href="https://www.youtube.com/user/CambridgeWeightPlan" target="_blank" class="social__icon social__icon--yt"><span class="u-hide-acc">YouTube</span></a>
+                    </div>
+            </div>
+    
+            <div class="primary-footer__smallprint ta-center">
+                <p>Cambridge Weight Plan Limited. Stafford House, 10 Brakey Road, Corby, Northants NN17 5LU. Tel +44 (0)1536 403344. Fax +44 (0)1536 202396</p>
+                <p>Registered in England and Wales No.1673704. VAT No: 550 6021 81. Cambridge Weight Plan Ltd does not conduct or commission any animal testing of any ingredients or finished products.</p>
+            </div>
+        </div>
+    </footer>
+    
+    </div>
+    
+        <!-- Javascript bundle -->
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="/assets/js/main.js?v=637098456848125815"></script>
+    

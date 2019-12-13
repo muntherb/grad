@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/progress">Progress</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/diets">Diets</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/exercises">Exercises</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact dietician</a>
+        </li>
+      </ul>
+      <a class="btn btn-secondary my-2 my-sm-0" href="/users/logout" >Logout</a>
+    </div>
+  </nav>
+  <p>         
+
+
+
+   
+
+
+
+  </p>
+
+  
+<%var BMI = user.weight/(user.height*user.height)%>
+  <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+      <div class="card-header">Welcome <%= user.name %>!</div>
+      <div class="card-body">
+        <h4 class="card-title">This is your smart dietician app!</h4>
+        <p class="card-text">Your current BMI is <%=BMI %> </p>
+      </div>
+    </div>
+
+    <%if ( 20 > BMI ){ %>
+        <div class="alert alert-dismissible alert-primary">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>BMI below 20 = Underweight</strong> <a href="#" class="alert-link">You don’t need to lose weight. Your BMI shows you are already underweight for your height and your health could be at risk by limiting your calories. It may be worth talking to your GP.    
+          </div>
+    <% } else if (  BMI>20 && BMI < 25) { %>
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Well done! BMI 20 – 24.9 = Healthy Weight</strong> Nice one! You are an ideal weight for your height.
+          </div>
+    <% } else if (BMI>25 && BMI < 30) { %>
+        <div class="alert alert-dismissible alert-danger">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>BMI 25 – 29.9 = Overweight</strong> <a href="#" class="alert-link">Your weight is above the ideal range for your height, but help is at hand. Find a Consultant near you and start moving back into that healthy weight range.
+          </div>
+    <% } else if (BMI>30 && BMI < 40) { %>
+        <div class="alert alert-dismissible alert-danger">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>BMI 30 – 39.9 = Obese</strong> <a href="#" class="alert-link">Your weight is way above ideal and increasing your risk of health issues. Find a Consultant now and get the support you need to reduce your BMI to a healthy level.
+          </div>
+    <% } else { %>
+        <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+            <div class="card-header">BMI 40+ = Very Obese</div>
+            <div class="card-body">
+              <h4 class="card-title">Watch out!</h4>
+              <p class="card-text">You are seriously at risk of health issues. Find a Consultant now for the help and support you need to get back to a healthy weight.</p>
+            </div>
+          </div>
+    <% } %>
+
+        </div>
+    </section>
+    
+   
+   
